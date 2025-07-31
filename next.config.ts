@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove output: 'standalone' if you have it, or use Option 1
-  experimental: {
-    // This might help with binding
-  }
+  output: 'standalone',
+  // Disable source maps in production for smaller bundle size
+  productionBrowserSourceMaps: false,
+  // Enable compression
+  compress: true,
+  // Optimize images
+  images: {
+    unoptimized: false,
+  },
+  // Optional: Add any other configurations you need
 }
 
 module.exports = nextConfig
